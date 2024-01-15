@@ -40,7 +40,6 @@ public class WorkWithFiles
             Console.WriteLine(ex.Message);
         }
     }
-
     public void DeleteFile()
     {
         DeleteFilesRecursively(_dirPath);
