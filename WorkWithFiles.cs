@@ -6,7 +6,7 @@ public class WorkWithFiles
     public WorkWithFiles(string dirPath)
         => _dirPath = dirPath;
 
-    void DeleteFile()
+    public void DeleteFile()
     {
         if (!Directory.Exists(_dirPath))
         {
