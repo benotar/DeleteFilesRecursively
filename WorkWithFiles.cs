@@ -15,6 +15,17 @@ public class WorkWithFiles
 
         string[] files = Directory.GetFiles(_dirPath);
 
+        HashSet<string> uniqueContent = new HashSet<string>();
+
+        foreach (string file in files)
+        {
+            string fileContent = File.ReadAllText(file);
+
+            if(!uniqueContent.Add(fileContent))
+            {
+                File.Delete(file);
+            }
+        }
 
     }
 }
